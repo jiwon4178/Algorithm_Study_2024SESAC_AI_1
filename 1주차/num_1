@@ -1,1 +1,13 @@
-#
+def change(n):    
+    coin_list = [500, 100, 50, 10] 
+    
+    coin = 0
+    for c in coin_list:
+        coin += n // c  
+        n %= c         
+    
+    return coin
+
+money = 1260
+coin = change(money)
+print(coin)
